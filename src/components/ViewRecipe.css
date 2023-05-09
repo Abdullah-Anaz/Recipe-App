@@ -1,0 +1,66 @@
+.view{
+    flex: 0.825;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.view__content{
+    margin: 20px;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.view__content::-webkit-scrollbar {
+    display: none;
+}
+
+.ingredient__check .strikethrough{
+    margin-left: 10px;
+}
+
+.ingredient__check input[type=checkbox]:checked+label.strikethrough {
+    color: #ccc;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.ingredient__check input[type=checkbox]:checked{
+    accent-color: #2EC76D;
+}
+
+.view img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.view__ingredients,
+.view__description{
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.view__ingredients h5,
+.view__description h5{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 850px) {
+    .view {
+        flex: 0.7;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .view {
+        flex: 1;
+    }
+}
