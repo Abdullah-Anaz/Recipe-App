@@ -1,0 +1,15 @@
+.comingsoon__page{
+    flex: 0.825;
+}
+
+@media screen and (max-width: 850px) {
+    .comingsoon__page {
+        flex: 0.7;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .comingsoon__page {
+        flex: 1;
+    }
+}
