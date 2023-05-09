@@ -1,0 +1,13 @@
+.header {
+    padding: 40px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    color: #0F0F2D;
+}
+
+.header p {
+    color: rgb(168, 168, 168);
+    margin-bottom: 0.25rem;
+}
