@@ -1,0 +1,42 @@
+.editRecipe {
+    flex: 0.825;
+    background-color: white;
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.editRecipe__backBtn {
+    border: 1px solid #eee;
+    width: 100px;
+}
+
+.editRecipe::-webkit-scrollbar {
+    display: none;
+}
+
+.editRecipe__form::-webkit-scrollbar {
+    display: none;
+}
+
+.editRecipe__form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width: 850px) {
+    .editRecipe {
+        flex: 0.7;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .editRecipe {
+        flex: 1;
+    }
+}
