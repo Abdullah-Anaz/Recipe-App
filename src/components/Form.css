@@ -1,0 +1,52 @@
+form{
+    margin: 25px;
+}
+
+label{
+    margin-top: 25px;
+}
+
+.wrapper-class{
+    border: 1px solid black;
+}
+
+.editor-class{
+    margin: 10px 25px;
+}
+
+.form__ingredientAdd:hover{
+    color: #2EC76D;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.form__ingredientsList{
+    margin-top: 10px;
+    width: 50%;
+}
+
+.form__ingredientsList li{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form__ingredientListItem{
+    flex: 1;
+}
+
+.form__ingredientsListDeleteButton{
+    margin-left: 25px;
+    color: #aaa;
+    transition: all ease-in-out 0.2s;
+}
+
+.form__ingredientsListDeleteButton:hover{
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+.form__ingredientsListDeleteButton {
+        color: red;
+    }
+}
