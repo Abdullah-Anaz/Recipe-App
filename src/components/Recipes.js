@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
 import Header from "./Header";
 import { useQuery } from "@tanstack/react-query";
-import { fetchRecipes } from "../api/data";
+import { fetchRecipes } from "../api/api";
 import categoriesData from "../categories";
 import TapasIcon from "@mui/icons-material/Tapas";
 import "./Recipes.css";

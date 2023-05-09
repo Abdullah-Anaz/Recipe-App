@@ -5,7 +5,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { fetchRecipe } from "../api/data";
+import { fetchRecipe } from "../api/api";
 
 import "./EditRecipe.css";
 

@@ -5,7 +5,7 @@ import ModalDialog from "./ModalDialog";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import { deleteRecipe } from "../api/data";
+import { deleteRecipe } from "../api/api";
 import { useQueryClient } from "@tanstack/react-query";
 import "./Recipe.css";
 
