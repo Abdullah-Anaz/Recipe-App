@@ -1,0 +1,121 @@
+.nav{
+    flex: 0.175;
+    background-color: #F6F7F8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+.responsive__navbar{
+    display: none;
+}
+
+.navbar__top{
+    display: flex;
+    flex-direction: column;
+    background-color: #0F0F2D;
+    color: white;
+    padding: 30px 20px;
+}
+
+.navbar__top span{
+    color: #2EC76D;
+}
+
+.navbar__top p{
+    color: #f6f7f88f;
+    margin-top: -15px;
+}
+
+.navbar__top button{
+    background-color: #2EC76D;
+    color: white;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.navbar__top button:hover{
+    background-color: #29ae60;
+}
+
+.navbar__menu{
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.navbar__items{
+    margin: 25px 0 0px 25px;
+}
+
+.navbar__menu::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar__item{
+    margin-bottom: 25px;
+}
+
+.navbar__item a {
+    text-decoration: none;
+    color: rgb(168, 168, 168);
+    transition: all ease-in-out 0.2s;
+    font-weight: bold;
+}
+
+.navbar__item a:hover{
+    color: #2EC76D;
+    cursor: pointer;
+}
+
+.navbar__menuTitle{
+    margin: 10px 0px 0 25px;
+    color: rgb(168, 168, 168);
+}
+
+.navItem__icon{
+    margin-right: 10px;
+}
+
+.navbar__items a.active{
+    color: #2EC76D;
+}
+
+.navbar__footer{
+    width: 100%;
+    text-align: center;
+    color: rgb(168, 168, 168);
+}
+
+@media screen and (max-width: 1000px) {
+    .nav {
+            flex: 0.3;
+        }
+}
+
+@media screen and (max-width: 650px) {
+    .nav {
+        display: none;
+    }
+
+    .responsive__navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #2EC76D;
+        max-height: 100%;
+        max-width: 50px;
+        overflow-y: scroll;
+    }
+
+    .responsive__navbar .btn{
+        color: #114828;
+        margin-bottom: 10px;
+    }
+
+    .responsive__navbar .btn .active {
+        color: #8effbd;
+    }
+
+}
