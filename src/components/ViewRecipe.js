@@ -51,10 +51,10 @@ function ViewRecipe() {
         />
         <div className="view__ingredients">
           <h5>Ingredients</h5>
-          <form className="ingredient__check">
+          <form>
             {recipe.data.ingredients.map((ingredient, index) => {
               return (
-                <div key={index}>
+                <div className="view__ingredient" key={index}>
                   <input type="checkbox" value={ingredient} />
                   <label className="strikethrough">{ingredient}</label>
                 </div>
@@ -65,7 +65,12 @@ function ViewRecipe() {
 
         <div className="view__description">
           <h5>Description</h5>
-          <Editor editorState={editorState} readOnly={true} toolbarHidden />
+           <Editor
+            editorState={editorState}
+            readOnly={true}
+            toolbarHidden
+            editorClassName="editor-class"
+          />
         </div>
       </div>
     </div>
