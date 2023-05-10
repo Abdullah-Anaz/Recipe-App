@@ -12,6 +12,7 @@ label{
 
 .editor-class{
     margin: 10px 25px;
+    max-height: 500px;
 }
 
 .editor-class img{
