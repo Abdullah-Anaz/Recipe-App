@@ -14,6 +14,10 @@ label{
     margin: 10px 25px;
 }
 
+.editor-class img{
+    max-width: 100%;
+}
+
 .form__ingredientAdd:hover{
     color: #2EC76D;
     cursor: pointer;
