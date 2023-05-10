@@ -46,7 +46,7 @@ function ViewRecipe() {
       </button>
       <div className="view__content">
         <img
-          src={`http://localhost:4000/${recipe.data.image}`}
+          src={`https://recipe-app-te3u.onrender.com/${recipe.data.image}`}
           alt={`${recipe.data.image}`}
         />
         <div className="view__ingredients">
