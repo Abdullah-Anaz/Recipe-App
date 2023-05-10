@@ -33,7 +33,7 @@ function EditRecipe() {
 
   return (
     <div className="editRecipe">
-      <Header heading={"Let's Add a New Recipe"} />
+      <Header heading={"Let's Edit Your Recipe"} />
 
       <button className="btn editRecipe__backBtn" onClick={handleBackBtnClick}>
         <HomeOutlinedIcon />
