@@ -4,7 +4,7 @@
 
 <img src="https://github.com/Abdullah-Anaz/Recipe-App/blob/main/recipe.png"/>
 
-<a href="https://my-recipe-application.netlify.app/">Live</a>
+<a href="https://my-recipe-application.netlify.app/">Live: https://my-recipe-application.netlify.app/</a>
 
 <h2>Features</h2>
 <ul>
