@@ -19,6 +19,11 @@
     cursor: pointer;
 }
 
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
 .card-title{
     color: #0F0F2D;
     font-weight: bold;
@@ -27,6 +32,7 @@
 .card-text{
     color: rgb(168, 168, 168);
     font-weight: lighter;
+    flex: 1;
 }
 
 .card img{
