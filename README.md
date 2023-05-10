@@ -4,6 +4,8 @@
 
 <img src="https://github.com/Abdullah-Anaz/Recipe-App/blob/main/recipe.png"/>
 
+<a href="https://my-recipe-application.netlify.app/">Live</a>
+
 <h2>Features</h2>
 <ul>
   <li>Add recipes with a title, description, and ingredients</li>
