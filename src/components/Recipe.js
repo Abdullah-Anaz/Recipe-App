@@ -57,7 +57,7 @@ function Recipe({ id, title, description, image }) {
     <div className="recipe">
       <div className="card">
         <img
-          src={`http://localhost:4000/${image}`}
+          src={`https://recipe-app-te3u.onrender.com/${image}`}
           className="card-img-top"
           alt={`${image}`}
           onClick={(e) => handleCardClick(id)}
