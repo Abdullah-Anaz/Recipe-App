@@ -8,10 +8,12 @@ import { useMutation } from "@tanstack/react-query";
 import { deleteRecipe } from "../api/api";
 import { useQueryClient } from "@tanstack/react-query";
 import "./Recipe.css";
+import { Buffer } from "buffer";
 
 function Recipe({ id, title, description, image }) {
   const [isShow, invokeModal] = useState(false);
   const [recipeDescription, setRecipeDescription] = useState("");
+  const [imageData, setImageData] = useState(null);
 
   const queryClient = useQueryClient();
 
@@ -19,6 +21,15 @@ function Recipe({ id, title, description, image }) {
     return invokeModal(!isShow);
   };
 
+   useEffect(() => {
+    //
+    setImageData(
+      `data:${image.contentType};base64,${Buffer.from(image.data).toString(
+        "base64"
+      )}`
+    );
+  }, [image]);
+  
   useEffect(() => {
     const recipeDescriptionJSON = JSON.parse(description);
     setRecipeDescription(recipeDescriptionJSON.blocks[0].text);
@@ -57,9 +68,9 @@ function Recipe({ id, title, description, image }) {
     <div className="recipe">
       <div className="card">
         <img
-          src={`https://recipe-app-te3u.onrender.com/${image}`}
+          src={imageData}
           className="card-img-top"
-          alt={`${image}`}
+          alt={image.name}
           onClick={(e) => handleCardClick(id)}
         />
         <div className="card-body">
