@@ -16,7 +16,6 @@ const RecipeForm = ({
   recipeCategory,
   recipeIngredients,
   description,
-  recipeImage,
   type,
 }) => {
   const [title, setTitle] = useState(recipeTitle);
@@ -26,7 +25,7 @@ const RecipeForm = ({
   const [editorState, setEditorState] = useState(
     EditorState.createWithContent(convertFromRaw(description))
   );
-  const [image, setImage] = useState(recipeImage);
+  const [image, setImage] = useState(null);
   const queryClient = useQueryClient();
 
   const categories = categoriesData;
@@ -118,8 +117,6 @@ const RecipeForm = ({
     }
   };
 
-  console.log(ingredients);
-
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -134,7 +131,7 @@ const RecipeForm = ({
       <br />
       <label>
         Category: <br />
-        <select onChange={handleCategoryChange} required>
+        <select onChange={handleCategoryChange} defaultValue={category} required>
           <option value="Appetizers & Snacks" selected>Appetizers & Snacks</option>
           {categories.map(({ category }, index) => (
             <option key={index} value={category}>{category}</option>
@@ -187,6 +184,7 @@ const RecipeForm = ({
           type="file"
           accept="image/png,image/jpeg"
           onChange={handleImageChange}
+          required={type === "add"}
         />
       </label>
       <br />
