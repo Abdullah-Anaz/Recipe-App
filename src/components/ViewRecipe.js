@@ -7,11 +7,13 @@ import { EditorState, convertFromRaw } from "draft-js";
 import { useNavigate } from "react-router-dom";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import "./ViewRecipe.css";
 import Header from "./Header";
+import { Buffer } from "buffer";
+import "./ViewRecipe.css";
 
 function ViewRecipe() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [image, setImage] = useState(null);
   const navigate = useNavigate();
   const { id } = useParams();
   const {
@@ -30,6 +32,11 @@ function ViewRecipe() {
       const contentState = convertFromRaw(JSON.parse(recipe.data.description));
       const newEditorState = EditorState.createWithContent(contentState);
       setEditorState(newEditorState);
+      
+      //set image data
+      setImage(
+        `data:${recipe.data.image.contentType};base64,${Buffer.from(recipe.data.image.data).toString('base64')}`
+      );
     }
   }, [recipe]);
 
@@ -46,8 +53,8 @@ function ViewRecipe() {
       </button>
       <div className="view__content">
         <img
-          src={`https://recipe-app-te3u.onrender.com/${recipe.data.image}`}
-          alt={`${recipe.data.image}`}
+          src={image}
+          alt={recipe.data.image.name}
         />
         <div className="view__ingredients">
           <h5>Ingredients</h5>
