@@ -43,7 +43,6 @@ function AddRecipe() {
           recipeCategory={"Appetizers & Snacks"}
           recipeIngredients={[]}
           description={defaultContent}
-          recipeImage={null}
           type={"add"}
         />
       </div>
