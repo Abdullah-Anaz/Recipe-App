@@ -5,6 +5,8 @@
 <img src="https://github.com/Abdullah-Anaz/Recipe-App/blob/main/recipe.png"/>
 
 <a href="https://my-recipe-application.netlify.app/">Live: https://my-recipe-application.netlify.app/</a>
+<p>Please note that the backend server might be slower as I have hosted it on a free server. <br>
+Due to this API requests might take sometime</p>
 
 <h2>Features</h2>
 <ul>
