@@ -48,7 +48,6 @@ function EditRecipe() {
           recipeCategory={recipe.data.category}
           recipeIngredients={recipe.data.ingredients}
           description={JSON.parse(recipe.data.description)}
-          recipeImage={recipe.data.image}
           type={"edit"}
         />
       </div>
